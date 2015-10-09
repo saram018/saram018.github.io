@@ -1,0 +1,140 @@
+
+h1{
+color:#3F3F37;
+}
+
+h4 {
+ font-family:Comic Sans;
+ font-style: italic;
+ color: #D6D6B1;
+   }
+   
+  h3{
+  color: #DE541E;
+   padding-bottom: 10px;
+  }
+  
+  
+  
+
+
+#header {
+	position:absolute;
+	left:0; right:0;
+    height: 150px;
+    background-color: #DE541E;
+    color:white;
+    text-align:center;
+    padding:5px;
+	padding-left:20px;
+}
+#nav {
+	position:absolute;
+	left:0; top:150px; bottom: 40px;
+	height:700px;
+    width: 150px;
+    background-color:#878472;
+    padding:10px;
+	font-weight:bold;
+}
+#section {
+ position: absolute;
+    left:150px; top:150px; right:150px; bottom:40px;
+	height:700px;
+    padding:10px;
+    text-align:center;
+    background-color:#D6D6B1;
+	
+}
+#footer {
+position: absolute;
+    left:0; top:850px; right:0; bottom:0;
+	height:40px;
+    background-color:#3F3F37;
+    color:white;
+    text-align:center;
+   padding:5px;	 	 
+}
+
+#ad{
+	position: absolute;
+     top:150px; right:0; bottom:40px;
+	 height:700px;
+	 width:150px;
+    background-color:#878472;
+    float:right;
+    padding:10px;
+	}
+
+ ul {
+  text-align: left;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+	
+}
+
+ li {
+color: #3F3F37 ;
+  padding: 15px 20px;
+  background: #878472;
+  cursor: pointer;
+}
+ li:hover {
+  background: #3F3F37 ;
+  color: #fff;
+}
+
+ul li ul {
+  padding: 0;
+  position: relative;
+  top: 10px;
+  width: 150px;
+  display: none;
+}
+ul li ul li { 
+  background: #3F3F37; 
+  display: block; 
+  color: #D6D6B1;
+  text-shadow: 0 -1px 0 #000;
+}
+ul li ul li:hover { background: #DE541E;}
+
+ul li:hover ul {
+  display: block;
+    position: relative;
+}
+
+#background{
+	background-color:#494331 ;
+	border-radius: 25px;
+	text-align:left;
+}
+
+p.title{
+    color:white;
+    font-size: 15px;
+    font-weight:bold
+}
+
+span.input{
+	color: #3F3F37;
+	font-weight:bold;
+	
+}
+input[class=button] {
+width:100px;
+background:#878472 ;
+color:#D6D6B1;
+height:30px;
+border-radius: 15px;
+border: 2p solid #3F3F37 ;
+}
+input[class=button]:hover {
+background:#DE541E;
+}
+textarea#feedback {
+width:300px;
+height:400px;
+display:block;
+}
