@@ -32,12 +32,18 @@
 
 <div id="section">
 
-<form name="form1" method="" action="" onsubmit="return validateForm(this)" >
+<form name="form1" method="POST" action="validate.php" onsubmit="return validateForm(this)" >	
      <span class="input"> First name: </span>
      <input type="text" name="fname" value="">
     <br><br>
     <span class="input">Last name:</span>
     <input type="text" name="lname" value="">
+    <br><br>
+	<span class="input">Username:</span>
+    <input type="text" name="uname" value="">
+    <br><br>
+	<span class="input">Email:</span>
+    <input type="text" name="email" value="">
     <br><br>
     <span class="input"> Message:  </span>
      <textarea type="text" name="msg" value=""></textarea>
@@ -54,20 +60,21 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;" src="sara.jpg" alt="Sara" width="140" height = "400">
+    bottom: 0;" src="bmw.jpg" alt="Ad" width="140" height = "400">
 </div>
 
 <div id="footer">
 CSC 443, Assg 1, Fall 2015
 </div>
 
-</body>
 <script type='text/javascript'>
 function validateForm(form) {
 
     var firstname = form.fname.value;
     var lastname = form.lname.value;
 	var message = form.msg.value;
+	var email = form.email.value;
+	var username = form.uname.value;
 
     if (firstname==null || firstname.length==0 || firstname=="") {
 	      alert("Please Enter Your First Name");
@@ -77,6 +84,15 @@ function validateForm(form) {
 	      alert("Please Enter Your Last Name");
 		  return false;
 		  }
+    if ( username==null || username.length==0 || username=="") {
+	      alert("Please Enter Your Username");
+		  return false;
+		  }
+    if ( email==null || email.length==0 || email=="") {
+	      alert("Please Enter Your Email");
+		  return false;
+		  }		  
+		  
     if (message==null || message.length==0 || message=="") {
 	      alert("Please Enter your Message!");
 		  return false;
@@ -85,4 +101,6 @@ function validateForm(form) {
 }
 
  </script>
+ 
+ 
 </html>

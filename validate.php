@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <link rel="stylesheet" type="text/css" href="assg1.css">
- 
 </head>
 <body>
 
@@ -15,8 +13,9 @@
 
 <div id="nav">
 <ul>
-<li>Home</li>
+<li onclick="location.href='index.html';">Home</li>
 <li onclick="location.href='about.html';">About Me</li>
+
 <li>Courses
 	<ul>
       <li>Web Development</li>
@@ -26,19 +25,44 @@
 	  <li> Operating Systems</li>
 	  
  </ul>
- </li>
+</li>
+
 <li onclick="location.href='guestbook.html';">Guest Book</li>
 </ul>
 </div>
 
 <div id="section">
-<h3>Welcome to my assignment 1 page!</h3>
-<p>
-You have reached the homepage!
-</p>
-<p>
-Feel free to look around the website
-</p>
+
+<?php
+
+ 
+    $user = $_POST['uname'];
+    $email = $_POST['email'];
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $message = $_POST['msg'];
+
+ 
+    // include db connect class
+    require_once('/home/a1604491/public_html/db_connect.php');
+ 
+    // connecting to db
+    $db = new DB_CONNECT();
+    $query = mysql_query("SELECT Username FROM User WHERE Username='$user'");
+	if (mysql_num_rows($query) == 0)
+	{
+		$result = mysql_query("INSERT INTO User(Username,Firstname,Lastname,Email,Message)
+			VALUES('$user', '$fname','$lname','$email','$message')");
+	 
+	echo  "User successfully added.";
+	} else{
+		echo "Username Already Exists, Try Another";
+	    
+	}
+
+?>
+
+
 </div>
 
 <div id="ad">
@@ -54,5 +78,6 @@ Feel free to look around the website
 CSC 443, Assg 1, Fall 2015
 </div>
 
-</body>
+ 
+ 
 </html>
