@@ -140,7 +140,7 @@ display:block;
 }
 
 
-.greenButton {
+button.greenButton {
 	background-color:#44c767;
 	border-radius:28px;
 	border:1px solid #18ab29;
@@ -153,10 +153,10 @@ display:block;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
 }
-.greenButton:hover {
+button.greenButton:hover {
 	background-color:#5cbf2a;
 }
-.greenButton:active {
+button.greenButton:active {
 	position:relative;
 	top:1px;
 }
