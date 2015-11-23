@@ -3,7 +3,7 @@
 function parse(){
 	
 	var xmlhttp = new XMLHttpRequest();
-	var url = " http://vlsi.byblos.lau.edu.lb/data.json";
+	var url = "data.json";
     xmlhttp.open("GET", url, true);
 
 	xmlhttp.onreadystatechange = function stateChanged() {
